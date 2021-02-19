@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Boston Marathon Pace Predictor</title>
+    </head>
+        <body>
+            <h3>Please Enter Your Login Information</h3>
+            <div class="container">
+        <!--<form action="/index" method="POST">-->
+                <form action="/login" method="POST">
+                    <input type="text" placeholder="Username" name="username" id="username"
+                           value="{{request.form.username}}" style="border-style:solid">
+                    <br>
+                    <input type="password" placeholder="Password" name="password" id="password"
+                           value="{{request.form.password}}" style="border-style:solid">
+                    <br>
+                    <input type="submit" value="Login" style="background-color:yellow; border-color:blue; color:black;
+                                                            height:30px; width:70px; font-weight:bold">
+                </form>
+
+                {% if error %}
+                    <p class="error", style="color:red"><strong>Error: {{ error }}</strong>
+                {% endif %}
+            </div>
+        </body>
+</html>

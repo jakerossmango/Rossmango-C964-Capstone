@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boston Marathon Pace Predictor</title>
+</head>
+<body>
+<h3>Enter your projected finish time below:</h3>
+<div>
+  <form action="/predict" method="POST">
+    <!-- Maximum finish time for the Boston Marathon is just under 8hrs, so 7 is max hr possible to enter -->
+    <!-- BAA has a time limit of 6:00:00 to complete race after last starter crosses start line
+    https://www.baa.org/races/boston-marathon/plan/timing#:~:text=Athletes%20have%20six%20hours%20(6,number%20to%20score%20the%20race.
+    -->
+    <label for="finish_hr"><strong>Finish Hour:</strong></label>
+    <input type="number" step="1" id="finish_hr" name="finish_hr" min="1" max="7" required>
+    <br>
+    <label for="finish_min"><strong>Finish Minute:</strong></label>
+    <input type="number" step="1" id="finish_min" name="finish_min" min="0" max="59" required>
+    <br>
+    <label for="finish_sec"><strong>Finish Second:</strong></label>
+    <input type="number" step="1" id="finish_sec" name="finish_sec" min="0" max="59" required>
+    <br>
+    <input type="submit" value="Calculate" style="background-color:yellow; border-color:blue; color:black;
+                                                            height:30px; width:100px; font-weight:bold">
+  </form>
+</div>
+
+</body>
+</html>

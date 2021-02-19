@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Boston Marathon Pace Predictor</title>
+</head>
+<body>
+    <h3>Race Split Predictions Based On Projected Finish Time</h3>
+    <table border="1px solid black">
+        <th colspan="11"><h4>Predicted Race Splits per Segment</h4></th>
+        <tr><td> {{prediction[0][0]}} <td> {{prediction[0][1]}} <td> {{prediction[0][2]}} <td> {{prediction[0][3]}}
+        <td> {{prediction[0][4]}} <td> {{prediction[0][5]}} <td> {{prediction[0][6]}} <td> {{prediction[0][7]}}
+            <td> {{prediction[0][8]}} <td> {{prediction[0][9]}} <td> {{prediction[0][10]}}</tr>
+        <tr><td> {{prediction[1][0]}} <td> {{prediction[1][1]}}<td> {{prediction[1][2]}}<td> {{prediction[1][3]}}
+        <td> {{prediction[1][4]}} <td> {{prediction[1][5]}}<td> {{prediction[1][6]}}<td> {{prediction[1][7]}}
+        <td> {{prediction[1][8]}}<td> {{prediction[1][9]}} <td> {{prediction[1][10]}}</tr>
+    </table>
+
+    <img src={{filename}} alt="Line graph of predicted splits">
+    <img src={{scatter_file}} alt="Scatter plot of previous and predicted splits">
+    <form action="/enter_time" method="POST">
+        <p>Click the 'Return' Button below or the Back Arrow at the top of the screen to reenter your finish time.</p>
+    <input type="submit" value="Return">
+    </form>
+
+</body>
+
+</html>
